@@ -1,0 +1,9 @@
+tensorflow==2.15.0  # Replace with the specific version used in your code (check with `pip show tensorflow`)
+
+numpy
+
+pickle
+
+opencv-python
+
+matplotlib
