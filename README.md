@@ -60,9 +60,7 @@ To train and evaluate the video classification model, run:
 1. To train a custom pkl file run the code pickle_file.py
    ```bash
        python video pickle_file.py
-       
-2. ```bash
-      python video_classification_model.py
+       python video_classification_model.py
    
 This script video_classification_model assumes the preprocessed data is saved as your.pkl.
 
