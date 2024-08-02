@@ -1,67 +1,51 @@
 # Action-Recognition-Model
-Video Classification Using VGG16 and BiLSTM
 
+## Video Classification Using VGG16 and BiLSTM
 
-**Overview**
-    The script performs the following tasks:
-    
-    Configures GPU settings for TensorFlow.
-    
-    Loads preprocessed video data from a pickle file.
-    
-    Defines a neural network model using VGG16 and BiLSTM.
-    
-    Compiles and trains the model.
-    
-    Evaluates the model on test data.
-    
-    Plots and saves training history graphs.
+### Overview
 
+This repository provides a script for video classification using a deep learning model that combines the power of VGG16 for feature extraction and BiLSTM for capturing temporal dependencies in video sequences. The workflow includes:
 
-**Key Features:**
+- **GPU Configuration**: Sets up GPU for TensorFlow.
+- **Data Loading**: Loads preprocessed video data from a pickle file.
+- **Model Definition**: Builds a neural network using VGG16 and BiLSTM.
+- **Model Training**: Compiles and trains the model.
+- **Model Evaluation**: Evaluates the trained model on test data.
+- **Visualization**: Plots and saves training history graphs.
 
-  
-    Utilizes pre-trained VGG16 for efficient feature extraction
-    
-    Leverages Bi-LSTM architecture to capture temporal dependencies in video sequences
-    
-    Includes layer normalization for improved model performance
+### Key Features
 
+- **Pre-trained VGG16**: Efficient feature extraction.
+- **Bi-LSTM Architecture**: Captures temporal dependencies in video sequences.
+- **Layer Normalization**: Enhances model performance.
 
-**Requirements:**
+### Requirements
 
-    Python 3.9
-    
-    TensorFlow (https://www.tensorflow.org/)
-    
-    NumPy (https://numpy.org/)
-    
-    Pickle (https://python.readthedocs.io/en/stable/library/pickle.html)
-    
-    OpenCV (https://opencv.org/)
-    
-    Matplotlib (https://matplotlib.org/)
+- Python 3.9
+- TensorFlow
+- NumPy
+- Pickle
+- OpenCV
+- Matplotlib
 
-****Installation**:
-**
-  **Clone this repository:**
-    
-    Bash
-    git clone https://github.com/your-username/action-recognition-biLSTM-VGG16.git](https://github.com/archit0030/Action-Recognition-Model.git
-    
-    Use code with caution.
+### Installation ###
 
-  **Create a virtual environment (recommended) and install the required dependencies:**
-    Bash
+1. **Clone this repository:**
+
+   ```bash
+   git clone https://github.com/archit0030/Action-Recognition-Model.git
+
+    
+
+2.  **Create a virtual environment (recommended) and install the required dependencies:**
+    ```Bash
     python -m venv env
     
     source env/bin/activate  # Activate on Linux/macOS
     
     pip install -r requirements.txt  # Assuming a requirements.txt file is present
-    
-    Use code with caution.
 
-**Data Preparation:**
+***Data Preparation:***
 
     Prepare your video data and create training, validation, and test sets.
     
@@ -69,7 +53,7 @@ Video Classification Using VGG16 and BiLSTM
     
     Save the preprocessed data as a pickle file (your.pkl) in the same directory as the script.
 
-**Usage:**
+***Usage:***
   
     Run the script video classification model to train and evaluate the model:
     Bash
@@ -86,7 +70,7 @@ Video Classification Using VGG16 and BiLSTM
     You can modify the script to customize training parameters (epochs, batch size) and data paths.
 
 
-**Explanation:**
+***Explanation:***
 
     Import Libraries: The script imports necessary libraries for data manipulation, model building, training, visualization, and GPU configuration.
     
@@ -94,8 +78,8 @@ Video Classification Using VGG16 and BiLSTM
     
     Load Data: The script loads preprocessed video data from the pickle file. Modify the file path if needed.
 
-**Model Architecture:**
-  
+***Model Architecture:***
+
     A pre-trained VGG16 model is loaded with weights from ImageNet, but its top layers are frozen to prevent overfitting.
     
     TimeDistributed layers are used to apply VGG16 to each frame in a video sequence.
@@ -109,7 +93,7 @@ Video Classification Using VGG16 and BiLSTM
     Dropout layers help prevent overfitting.
     
     Dense layers with appropriate activation functions and regularization (L2) project the features to output probabilities for action classes.
-    
+
     Model Compilation: The model is compiled with an Adam optimizer, sparse categorical cross-entropy loss (suitable for multi-class classification), and accuracy metric.
     
     Early Stopping (Optional): You can uncomment this section to implement early stopping to prevent overtraining.
@@ -124,12 +108,12 @@ Video Classification Using VGG16 and BiLSTM
     
     Training History Visualization: Training and validation accuracy/loss curves are plotted using Matplotlib and saved as images.
 
-**Customization**:
+***Customization:***
     
     Modify the data loading section (data_file) to point to your preprocessed data file.
-    
-    Experiment with different Bi-LSTM configurations (units, return sequences) to potentially improve performance.
-    
-    Adjust regularization parameters (L2 weight) based on your dataset.
-    
-    Consider hyperparameter tuning using techniques like grid search or random search to find optimal settings.
+        
+        Experiment with different Bi-LSTM configurations (units, return sequences) to potentially improve performance.
+        
+        Adjust regularization parameters (L2 weight) based on your dataset.
+        
+        Consider hyperparameter tuning using techniques like grid search or random search to find optimal settings.
